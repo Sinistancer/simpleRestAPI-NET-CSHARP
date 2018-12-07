@@ -1,6 +1,6 @@
 # Simple restAPI with C# .NET
 
-These is restAPI with C# MVC Framework 
+These restAPI with C# MVC Framework 
 
 ## Getting Started
 
