@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "2fe201f3-984f-4f8f-b6bf-3d1146e6f41e",
+		"name": "CARCLUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER MEMBER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJraWtpIjoia2lraUBnbWFpbC5jb20iLCIwIjoiMTIvNi8yMDE4IDU6NTg6MDUgUE0ifQ.mwdrgBOOxbfOYCL6nmP3QV6xW70prVZpn8xJuNGtWj0"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "kiki@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Mr\",\n\t\"name\":\"iqbal\",\n\t\"first_nric\":\"T\",\n\t\"no_nric\":\"1234567\",\n\t\"last_nric\":\"A\",\n\t\"no_mobile\":\"658112245610\",\n\t\"email\":\"test@gmail.com\",\n\t\"postal_code\":\"40192\",\n\t\"promo_code\":\"CARFREE\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/member/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"member",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VIEW MEMBER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJraWtpIjoia2lraUBnbWFpbC5jb20iLCIwIjoiMTIvNi8yMDE4IDU6NTg6MDUgUE0ifQ.mwdrgBOOxbfOYCL6nmP3QV6xW70prVZpn8xJuNGtWj0"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "kiki@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/member/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"member",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJraWtpIjoia2lraUBnbWFpbC5jb20iLCIwIjoiMTIvNi8yMDE4IDU6NTg6MDUgUE0ifQ.mwdrgBOOxbfOYCL6nmP3QV6xW70prVZpn8xJuNGtWj0"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "kiki@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"kiki@gmail.com\",\n\t\"password\":\"p@ssw0rd\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE MEMBER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJraWtpIjoia2lraUBnbWFpbC5jb20iLCIwIjoiMTIvNi8yMDE4IDU6NTg6MDUgUE0ifQ.mwdrgBOOxbfOYCL6nmP3QV6xW70prVZpn8xJuNGtWj0"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "kiki@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Mr\",\n\t\"name\":\"iqbal\",\n\t\"first_nric\":\"T\",\n\t\"no_nric\":\"1234567\",\n\t\"last_nric\":\"A\",\n\t\"no_mobile\":\"658112245610\",\n\t\"email\":\"test@gmail.com\",\n\t\"postal_code\":\"40192\",\n\t\"promo_code\":\"CARFREE\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/member/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"member",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MEMBER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJraWtpIjoia2lraUBnbWFpbC5jb20iLCIwIjoiMTIvNi8yMDE4IDU6NTg6MDUgUE0ifQ.mwdrgBOOxbfOYCL6nmP3QV6xW70prVZpn8xJuNGtWj0"
+					},
+					{
+						"key": "email",
+						"type": "text",
+						"value": "kiki@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Mr\",\n\t\"name\":\"iqbal\",\n\t\"first_nric\":\"T\",\n\t\"no_nric\":\"1234567\",\n\t\"last_nric\":\"A\",\n\t\"no_mobile\":\"658112245610\",\n\t\"email\":\"test@gmail.com\",\n\t\"postal_code\":\"40192\",\n\t\"promo_code\":\"CARFREE\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61010/api/v1/member/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61010",
+					"path": [
+						"api",
+						"v1",
+						"member",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
